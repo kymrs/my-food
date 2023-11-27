@@ -1,0 +1,370 @@
+/* CSS Reset */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+blockquote, q {
+	quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* My Style */
+html {
+	scroll-behavior: smooth;
+}
+
+:root {
+	--primary : #12486B;
+	--secondary : #81C4C9;
+	--tertiary : #EDF0D9;
+	--font-color : #333;
+}
+
+body {
+ font-family: calibri;
+}
+
+.container {
+	padding: 4.3em 5.2% 0;
+	box-sizing: border-box;
+}
+
+/* Header */
+header {
+	display: flex;
+	justify-content: space-between;
+	position: fixed;
+	left: 0;
+	right: 0;
+	align-items: center;
+	background-color: rgba(18, 73, 109, 0.85);
+	margin: 0 5.2%;
+	padding: 1em 0;
+	backdrop-filter: blur(4px);
+}
+
+header nav {
+	display: flex;
+}
+
+header .title {
+	font-size: 2rem;
+	font-weight: bold;
+	color: var(--tertiary);
+	margin-left: 1em;
+}
+
+header .title span {
+	color: var(--secondary);
+}
+
+nav .nav-menu {
+	display: flex;
+}
+
+nav a {
+	color: var(--tertiary);
+	margin-right: 5em;
+	text-decoration: none;
+	transition: 300ms;
+}
+
+nav a::after{
+	content: "";
+	display: block;
+    padding-bottom: 0.3rem;
+    border-bottom: 0.15rem solid var(--secondary);
+    transform: scaleX(0.55);
+    transition: 0.2s linear;
+}
+
+nav a:hover {
+	color: #2f8fcf;
+}
+
+nav a:hover::after{
+	transform: scaleX(0.25);
+}
+
+nav a:active::after{
+	padding-bottom: 0.1rem;
+}
+
+nav .menu {
+	margin-right: 30px;
+	cursor: pointer;
+}
+
+.line-header {
+	height: 3px;
+	background-color: rgba(18, 73, 109, 0.85);
+	position: fixed;
+	top: 70px;
+	left: 0;
+	right: 0;
+	margin: 0 5.2%;
+}
+
+/* Hero */
+.hero {
+	margin-top: 10px;
+	width: 100%;
+	box-sizing: border-box;
+}
+
+.hero img {
+	width: 100%;
+	background-size: cover;
+	height: 90vh;
+}
+
+/* Main */
+main {
+	justify-content: space-between;
+}
+
+main .line-main{
+	width: 0.2em;
+	background-color: rgba(18, 73, 109, 0.8);
+	margin: 10px 0;
+}
+
+/* Aside */
+
+aside {
+	width: 20%;
+	margin: 10px 0;
+}
+
+aside .title {
+	font-size: 1.1rem;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+
+aside .background {
+	background-color: var(--secondary);
+	width: 70px;
+	height: 70px;
+	border-radius: 50px;
+	overflow: hidden;
+	text-align: center;
+	margin: 5px 10px 0px 0;
+	float: left;
+}
+
+aside img {
+	margin: 5px 0 0;
+}
+
+aside p {
+	text-align: justify;
+	line-height: 1.3rem;
+}
+
+/* Article */
+article {
+	width: 72%;
+}
+
+.my-food .title {
+	font-size: 1.5rem;
+	font-weight: bold;
+	margin: 20px 0 5px;
+}
+
+article .line {
+	width: 50px;
+	height: 3px;
+	background-color: var(--secondary);
+}
+
+.my-food p {
+	line-height: 1.3em;
+	text-align: justify;
+	margin-top: 10px;
+}
+
+
+article .title-menu {
+	font-size: 1.5rem;
+	font-weight: bold;
+	margin: 20px 0 5px;
+}
+
+article p {
+	line-height: 1.3em;
+	text-align: justify;
+	margin-top: 10px;
+}
+
+article .product .title {
+	font-size: 1.3rem;
+	font-weight: bold;
+	margin: 20px 0;
+} 
+
+article .product img {
+	width: 100%;
+}
+
+article .product p {
+	margin: 15px 0;
+}
+
+article .product button {
+	background-color: var(--secondary);
+	border: none;
+	padding: 7px;
+	border-radius: 10px;
+	cursor: pointer;
+	margin-bottom: 12px;
+	transition: 300ms;
+}
+
+article .product button:hover {
+	background-color: #58b3b9;
+	border-radius: 15px;
+	scale: 0.955;
+}
+
+/* Footer */
+footer {
+	width: 100%;
+	background-color: var(--primary);
+	margin-top: 30px;
+	text-align: center;
+}
+
+footer p {
+	padding: 30px 0;
+	color: #fff;
+}
+
+/* Media Queries */
+@media ( max-width: 1100px ){
+	.hero img {
+		height: 70vh;
+	}
+}
+
+@media ( max-width: 900px ){
+	.hero img {
+		height: 60vh;
+	}
+}
+
+@media ( max-width: 895px ){
+	header nav .nav-menu {
+		background-color: #64b6bc;
+		padding: 20px 70px;
+		display: inline-block;
+		position: absolute;
+		right: -1000px;
+		top: 70px;
+		text-align: center;
+		transition: 300ms;
+		border-radius: 5px;
+	}
+
+	header nav .active {
+		right: 0;
+	}
+
+	header nav .nav-menu a {
+		margin: 20px 0;
+		line-height: 30px
+	}
+
+	nav .nav-menu a::after{
+		padding-bottom: 0.1rem;
+	}
+
+}
+
+@media ( min-width: 895px ){
+	header nav .menu {
+		display: none;
+	}
+}
+
+@media ( min-width: 650px ){
+	main {
+		display: flex;
+	}
+
+	article .product .image-product {
+		width: 85%;
+	}
+}
+
+@media ( max-width: 650px ){
+	.hero img {
+		height: 40vh;
+	}
+
+	aside {
+		width: 100%;
+		margin: 20px 0;
+	}
+
+	article {
+		width: 100%;
+	}
+
+	aside .title,
+	.my-food .title,
+	.menu .title-menu {
+		text-align: center;
+	}
+
+	.my-food .line, .menu .line {
+		margin: 0px auto;
+	}
+
+	.product .image-product {
+		width: 100%;
+	}
+}
+
